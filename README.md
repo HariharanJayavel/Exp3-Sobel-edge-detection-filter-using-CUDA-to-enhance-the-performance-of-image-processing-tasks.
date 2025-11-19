@@ -3,7 +3,7 @@
 <h3>NAME:HARIHARAN J</h3>
 <h3>REGISTER NO:212223240047</h3>
 <h3>EX. NO:3</h3>
-<h3>DATE:</h3>
+<h3>DATE : 25.09.2025</h3>
 <h1> <align=center> Sobel edge detection filter using CUDA </h3>
   Implement Sobel edge detection filtern using GPU.</h3>
 Experiment Details:
@@ -222,28 +222,6 @@ __global__ void sobelFilter(const unsigned char *srcImage, unsigned char *dstIma
     }
 }
 ```
-
-## **Report Summary**
-
-### **Objective**
-The objective of this experiment was to implement the Sobel edge detection filter using CUDA, analyze the performance of the GPU implementation, and compare it with the traditional CPU implementation. The experiment also aimed to study the influence of block size on execution time and evaluate the quality of outputs produced by both approaches.
-
-### **Key Findings**
-- The CUDA implementation demonstrated significantly faster performance than the CPU version, especially for larger images.
-- Changing block size affected GPU occupancy and kernel execution efficiency, where a block size of 16×16 provided the best balance.
-- CPU and GPU outputs were visually similar, with minor pixel intensity variations due to floating-point precision and thread computation order.
-- CUDA allowed parallel computation of gradient values, resulting in sharper and more precise edges in some cases.
-
-### **Execution Time Graphs**
-*(Insert your generated matplotlib graphs here)*  
-Examples that may be included:
-- **Graph 1:** GPU execution time vs block size (8×8, 16×16, 32×32).  
-- **Graph 2:** CPU vs GPU execution time comparison.
-
-### **Output Comparison**
-- The CUDA output showed slightly sharper edges because of parallel gradient computation.
-- Minor discrepancies were observed due to rounding differences, but overall edge patterns were consistent between CPU and GPU implementations.
-
 ---
 
 ## **Tools Required**
